@@ -8,20 +8,17 @@ body
     font-family:sans-serif;
     margin:30px;
 }
-.cabecera
+th
 {
     font-family: Times New Roman;
-        padding: 1cm;
+        padding: 10px;
         background-color:black;
         color:white;
 }
-.cabecera2
-{
-    font-family: Times New Roman;
-    background-color:black;
+
+p{
     color:white;
 }
-
 td{
    padding: 30px;
    background-color: #712B75;
@@ -34,8 +31,14 @@ h2
     font-family: Times New Roman;
    color:white;
 }
-a{
-    color:whitesmoke;
+
+h1
+{
+    color:white;
+}
+h3
+{
+    color:white;
 }
 tr:hover td{
     background-color: #0F2F83;

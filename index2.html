@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos2.css">
+</head>
+<body>
+    <h1><center>CSS</h1></center>
+    <p>Hojas de Estilo en Cascada (del inglés Cascading Style Sheets) o CSS es el lenguaje de estilos utilizado para describir la presentación de documentos HTML o XML (en-US) (incluyendo varios languages basados en XML como SVG, MathML o XHTML). CSS describe como debe ser renderizado el elemento estructurado en la pantalla, en papel, en el habla o en otros medios.</p>
+    <h2>COLORES</h2>
+    <h3>Links de ayuda</h3>
+    <a href="https://hslpicker.com/">HSL COLOR PICKER</a>
+    <br>
+    <a href="https://htmlcolors.com/google-color-picker">GOOGLE COLOR PICKER</a>
+    <br>
+    <a href="https://www.w3.org/TR/css-color-3/#svg-color">CSS COLOR MODULE LEVEL 3</a>
+    <br>
+    <table border="5">
+        <thead>
+            <tr>
+                <th>ELEMENTO</th>
+                <th>DESCRIPCION</th>
+                <th>EJEMPLO</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Nombre de Color</td>
+                <td>Podemos especificar un color usando un nombre predefinido.</td>
+                <td>p{color: red;}</td>
+            </tr>
+            <tr>
+                <td>RGB</td>
+                <td>Para definir un color como la mezcla las intensidades de los colores primarios podemos usar la función: rgb(red, green, blue)</td>
+                <td>p.encolor{color: rgb (255,0,255);}</td>
+            </tr>
+            <tr>
+                <td>RGBA</td>
+                <td>Es idéntica a la función rgb, pero con un parámetro adicional denominado opacidad,  para especificar la transparencia.</td>
+                <td>rgba(255, 125, 0, 0.5);</td>
+            </tr>
+            <tr>
+                <td>VALOR HEXADECIMAL</td>
+                <td>Podemos utilizar un número hexadecimal para definir un color. Es una alternativa a la función  rgb.</td>
+                <td>p { color: #ff0000; }</td>
+            </tr>
+            <tr>
+                <td>HSL</td>
+                <td>Permite definir un color segun el tono, saturacion y luminosidad en ese orden.</td>
+                <td>p { color: hsl(0, 100%, 50%); }</td>
+            </tr>
+            <tr>
+                <td>HSLA</td>
+                <td>Esta función es idéntica a la función hsl, pero con un parámetro adicional denominado opacidad,  para especificar la transparencia.</td>
+                <td>p { color: hsla(0, 100%, 50%, 0.5); }</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>SELECTORES</h2>
+    <p>Permiten seleccionar elementos del documento a los que queremos aplicar estilos.</p>
+    <h3>Links de ayuda</h3>
+    <a href="https://www.w3.org/TR/selectors-3/"">SELECTORS LEVEL 3</a>
+    <br>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">PSEUDO-CLASSES</a>
+    <br>
+
+    <a href="https://docs.emmet.io/cheat-sheet/">EMMET DOCUMMENTATION</a>
+    <br>
+
+    <table border="5">
+        <thead>
+            <tr>
+                <th>ELEMENTO</th>
+                <th>DESCRIPCION</th>
+                <th>EJEMPLO</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Selector Universal (*)</td>
+                <td>Selecciona todos los elementos.</td>
+                <td>*{color: green;}</td>
+            </tr>
+            <tr>
+                <td>Selector de Tipo(p)</td>
+                <td>Permite seleccionar elementos usando el nombre del elemento.</td>
+                <td>p{color: red;}Seleccionamos todos los elementos p del documento.</td>
+            </tr>
+            <tr>
+                <td>SELECTOR DE CLASE (.foo)</td>
+                <td>Permite seleccionar elementos en función de los valores del atributo class de los elementos.  Para que los elementos sean seleccionados, su atributo class debe incluir un valor  que coincida con el valor del selector.</td>
+                <td>p class=”foo bar”> ¡HOLA MUNDO!
+                    p class=”foo baz”> ¡ADIÓS MUNDO!
+                    .foo{color: blue;}
+                </td>
+            </tr>
+            <tr>
+                <td>SELECTORES DE ID (#foo)</td>
+                <td>Permite seleccionar un elemento en función del valor del atributo ID del elemento. Para que el elemento sea seleccionado, su atributo id debe coincidir exactamente con el valor dado en el selector.</td>
+                <td>p id=”foo”> ¡HOLA MUNDO! /p
+                    #foo{color: blue;}                 
+                </td>
+            </tr>
+            <tr>
+                <td>SELECTORES DE ATRIBUTO (a[foo])</td>
+                <td>Permite seleccionar elementos en función de la presencia o del valor de un determinado atributo.</td>
+                <td>a[title]{color: blue;}Seleccionamos los elementos a, que tengan el atributo title.</td>
+            </tr>
+            <tr>
+                <td>PSEUDO-CLASSES</td>
+                <td>Permite seleccionar elementos en base a su estado (:disabled), posicion de los elementos en el documento(:nth-child) e interacción del usuario(:hover)</td>
+                <td>selector:pseudo-class { … }
+                    button:hover{color: blue;}
+                </td>
+            </tr>
+            <tr>
+                <td>PSEUDO- ELEMENTOS</td>
+                <td>Seleccionan parte de un elemento en lugar del elemento mismo. Los pseudo-elementos se añaden a los selectores y permiten añadir estilos a una parte concreta de los elementos seleccionados.</td>
+                <td>selector::pseudo-elemento { … }
+                    p::first-line{color: blue;} 
+                </td>
+            </tr>
+            <tr>
+                <td>UNION DE SELECTORES</td>
+                <td>Selecciona la unión de los elementos seleccionados por cada selector de la lista</td>
+                <td>Selector-1, Selector-2, … {   }</td>
+            </tr>
+            <tr>
+                <td>SELECCIONAR ELEMENTOS DESCENDIENTES</td>
+                <td>Seleccionamos todos los elementos seleccionados por B que son descendientes de los elementos seleccionados por A</td>
+                <td>A B {}</td>
+            </tr>
+            <tr>
+                <td>SELECCIONAR ELEMENTOS HIJOS</td>
+                <td>Seleccionamos todos los elementos seleccionados por B que son hijos de los elementos seleccionados por  A</td>
+                <td>A>B{}</td>
+            </tr>
+            <tr>
+                <td>SELECCIONAR ELEMENTOS HERMANOS</td>
+                <td>Seleccionamos todos los elementos  seleccionados por B que son hermanos de los elementos seleccionados por A</td>
+                <td>A~B {}</td>
+            </tr>
+            <tr>
+                <td>SELECCIONAR ELEMENTOS HERMANOS ADYACENTES</td>
+                <td>Seleccionamos todos los elementos  seleccionados por B que son hermanos y que están inmediatamente despues de los elementos seleccionados por A.</td>
+                <td>A+B {}</td>
+            </tr>
+            <tr>
+                <td>ESPECIFICIDAD</td>
+                <td>La especificidad es la manera mediante la cual los navegadores deciden el valor que será aplicado a una propiedad de un elemento.</td>
+                <td>ME FALTA</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>LONGITUDES</h2>
+    <p>En CSS un longitud es una número y una unidad</p>
+    <h3>UNIDADES ABSOLUTAS</h3>
+    <table border="5">
+        <thead>
+            <tr>
+                <th>ELEMENTO</th>
+                <th>DESCRIPCION</th>
+                <th>EJEMPLO</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>PIXEL</td>
+                <td>Un píxel es la menor unidad homogénea en color que forma parte de una imagen digital.</td>
+                <td>5.3px</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>UNIDADES RELATIVAS</h3>
+    <table border="5">
+        <thead>
+            <tr>
+                <th>UNIDAD</th>
+                <th>DESCRIPCION</th>
+                <th>EJEMPLO</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>REM</td>
+                <td>Relativo al tamaño de la letra del elemento root (El elemento html)</td>
+                <td>#parrafo1{font-size: 1rem;}</td>
+            </tr>
+            <tr>
+                <td>%</td>
+                <td>Relativo a otro valor. Si establecemos el valor de la propiedad font-size, será un porcentaje del font-size del elemento padre.</td>
+                <td>#parrafo1{font-size: 1rem;}</td>
+            </tr>
+            <tr>
+                <td>VW</td>
+                <td>Relativo al ancho del viewport</td>
+                <td>.capa{width:100vw;}</td>
+            </tr>
+            <tr>
+                <td>VH</td>
+                <td>Relativo al alto del viewport</td>
+                <td>.caja{height: 50vh;}</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>MODELO DE CAJAS</h2>
+    <p>Cada elemento de un documento se considera una caja. CSS determina el tamaño, posicion y propiedades(color, fondo, el ancho del borde, etc).</p>
+    <p>Cada caja está compuesta de cuatra partes:Contenido, Relleno, Borde, Margen.</p>
+    <table border="5">
+        <thead>
+            <tr>
+                <th>AREA</th>
+                <th>DESCRIPCION</th>
+                <th>PROPIEDADES</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>CONTENIDO</td>
+                <td>Es el área donde se encuentra el contenido del elemento(texto, imagen, etc).</td>
+                <td>width,min-width,max-width,height,min-height,max-height</td>
+            </tr>
+            <tr>
+                <td>RELLENO</td>
+                <td>Es el área de relleno del elemento.</td>
+                <td>padding-top,padding-right,padding-bottom,padding-left</td>
+            </tr>
+            <tr>
+                <td>BORDE</td>
+                <td>Es el borde del elemento.</td>
+                <td>border-width,border-style,border-color</td>
+            </tr>
+            <tr>
+                <td>MARGEN</td>
+                <td>Es el margen del elemento. Se usa para separar el elemento de sus vecinos.</td>
+                <td>margin-top,margin-right,margin-bottom,margin-left</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
