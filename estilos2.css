@@ -2,7 +2,7 @@ body
 {
     margin:0;
     padding:0;
-    background-color:#46244C;
+    background-color:#16213E;
     background-size:cover ;
     background-position: center;
     font-family:sans-serif;
@@ -21,10 +21,10 @@ p{
 }
 td{
    padding: 30px;
-   background-color: #712B75;
+   background-color: #256D85;
    color:white;
     text-align: center;
-
+    /*712B75*/
 }
 h2
 {
