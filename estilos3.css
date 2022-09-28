@@ -95,3 +95,15 @@ h3
     padding-left: 3%;
     font-size: 17px;
 }
+.abajo
+{
+    background-color: black;
+    width:1520px;
+    margin-left: -10px;
+    padding-left: -50px;
+}
+.ultimo
+{
+    color:white;
+    padding-left: 20px;
+}
